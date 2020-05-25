@@ -1,0 +1,122 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "f5013c43-648f-4b17-b6c1-31c0cfadf4e9": {
+        "id": "f5013c43-648f-4b17-b6c1-31c0cfadf4e9",
+        "parent": null,
+        "name": "SportsSMS.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "SportsSMS.js",
+        "cursor": {
+          "lineNumber": 1,
+          "column": 1
+        },
+        "config": {
+          "runtime": "nodejs10.x",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "SportsSMS"
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1SMSSenderAPIsendSMSpost",
+            "config": {}
+          }
+        ],
+        "testCases": {
+          "8c30eed5-952b-4da3-bc9b-5afa7582d474": {
+            "id": "8c30eed5-952b-4da3-bc9b-5afa7582d474",
+            "name": "Test event 3",
+            "functionId": "f5013c43-648f-4b17-b6c1-31c0cfadf4e9",
+            "event": "{\n    \"receiver\": \"+14505125204\",\n    \"sender\": \"Moi\",\n    \"message\": \"Salut, si tu reçois ce message c'est que tu t'es fait hacké et Ti-Pogo va mourir\"\n}",
+            "eventTemplate": "hello-world"
+          }
+        }
+      }
+    },
+    "openFiles": [
+      "f5013c43-648f-4b17-b6c1-31c0cfadf4e9"
+    ],
+    "currentFileId": "f5013c43-648f-4b17-b6c1-31c0cfadf4e9",
+    "resources": {
+      "apigusEast1SMSSenderAPIsendSMSpost": {
+        "name": "apigusEast1SMSSenderAPIsendSMSpost",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "SMSSenderAPI",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "sendSMS",
+          "resourcePath": "/sendSMS",
+          "restMethod": "POST",
+          "proxyIntegration": false,
+          "enableCORS": true,
+          "stageMode": 0,
+          "stageName": "Test",
+          "mode": 0
+        }
+      },
+      "snsDirectSMSResource": {
+        "name": "snsDirectSMSResource",
+        "type": "SNS",
+        "config": {
+          "snsType": 1,
+          "numbers": [
+            "@{sender}",
+            "@{receiver}"
+          ]
+        }
+      }
+    },
+    "customTemplate": {
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "nodejs",
+          "version": "2.644.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "SportsSMS",
+    "projectDescription": "Sending SMS to Sporting Events",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "nodejs",
+    "platformRegions": {},
+    "lastSave": 1590415294308
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "sportssms",
+      "url": "https://github.com/fredbergeron/sportssms"
+    }
+  }
+}
