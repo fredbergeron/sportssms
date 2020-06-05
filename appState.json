@@ -33,7 +33,7 @@
             "id": "8c30eed5-952b-4da3-bc9b-5afa7582d474",
             "name": "Test event 3",
             "functionId": "f5013c43-648f-4b17-b6c1-31c0cfadf4e9",
-            "event": "{\n    \"receiver\": \"+14505125204\",\n    \"sender\": \"Moi\",\n    \"message\": \"Salut, si tu reçois ce message c'est que tu t'es fait hacké et Ti-Pogo va mourir\"\n}",
+            "event": "{\n    \"receiver\": \"+14505125204\",\n    \"sender\": \"Moi\",\n    \"message\": \"Salut, si tu reÃ§ois ce message c'est que tu t'es fait hackÃ© et Ti-Pogo va mourir\"\n}",
             "eventTemplate": "hello-world"
           }
         }
@@ -76,8 +76,7 @@
       }
     },
     "customTemplate": {
-      "overrideDefault": false,
-      "dialect": null,
+      "dialect": "CloudFormation",
       "definitions": null
     },
     "envVariables": [
@@ -110,7 +109,7 @@
     "platform": "AWS",
     "language": "nodejs",
     "platformRegions": {},
-    "lastSave": 1590415294308
+    "lastSave": 1591357816931
   },
   "VCS_STATE": {
     "provider": "GitHub",
